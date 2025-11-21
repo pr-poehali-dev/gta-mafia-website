@@ -1,15 +1,10 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import ParallaxSection from '@/components/ParallaxSection';
-import EditableText from '@/components/EditableText';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 
 const Index = () => {
-  const [mainTitle, setMainTitle] = useState('SIZE');
-  const [subtitle, setSubtitle] = useState('Элитная организация Лос-Сантоса');
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -19,19 +14,11 @@ const Index = () => {
         className="min-h-screen flex items-center justify-center animate-fade-in"
       >
         <div className="text-center px-4 animate-scale-in">
-          <EditableText
-            text={mainTitle}
-            onSave={setMainTitle}
-            tag="h1"
-            className="text-7xl font-bold mb-6 tracking-wider text-white"
-          />
+          <h1 className="text-7xl font-bold mb-6 tracking-wider text-white">SIZE</h1>
           <div className="w-24 h-1 bg-red-600 mx-auto mb-6 animate-fade-in"></div>
-          <EditableText
-            text={subtitle}
-            onSave={setSubtitle}
-            tag="p"
-            className="text-2xl text-white/90 mb-8 max-w-2xl mx-auto"
-          />
+          <p className="text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Элитная организация Лос-Сантоса
+          </p>
           <Link to="/about">
             <Button
               size="lg"

@@ -1,26 +1,10 @@
-import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import ParallaxSection from '@/components/ParallaxSection';
-import EditableText from '@/components/EditableText';
 import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const News = () => {
-  const [title, setTitle] = useState('Новости');
-  const [news1Title, setNews1Title] = useState('Открытие нового казино');
-  const [news1Text, setNews1Text] = useState(
-    'SIZE расширяет своё влияние в развлекательной индустрии. Открыто новое элитное казино в центре Лос-Сантоса с эксклюзивным доступом только для VIP-клиентов.'
-  );
-  const [news2Title, setNews2Title] = useState('Новые партнёрские соглашения');
-  const [news2Text, setNews2Text] = useState(
-    'Заключены стратегические альянсы с ведущими деловыми структурами города. Это укрепит позиции SIZE и откроет новые возможности для развития бизнеса.'
-  );
-  const [news3Title, setNews3Title] = useState('Расширение территории влияния');
-  const [news3Text, setNews3Text] = useState(
-    'SIZE успешно установила контроль над новыми районами на западном побережье. Операция прошла без эксцессов, все бизнес-процессы работают в штатном режиме.'
-  );
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -31,12 +15,7 @@ const News = () => {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto animate-scale-in">
-            <EditableText
-              text={title}
-              onSave={setTitle}
-              tag="h2"
-              className="text-5xl font-bold mb-8 text-white"
-            />
+            <h2 className="text-5xl font-bold mb-8 text-white">Новости</h2>
             <div className="w-24 h-1 bg-red-600 mb-12"></div>
 
             <div className="grid gap-6">
@@ -47,19 +26,11 @@ const News = () => {
                     <span className="text-sm uppercase">Ноя</span>
                   </div>
                   <div className="flex-1">
-                    <EditableText
-                      text={news1Title}
-                      onSave={setNews1Title}
-                      tag="h3"
-                      className="text-2xl font-bold mb-3 text-white"
-                    />
-                    <EditableText
-                      text={news1Text}
-                      onSave={setNews1Text}
-                      tag="p"
-                      className="text-white/80 leading-relaxed mb-4"
-                      multiline
-                    />
+                    <h3 className="text-2xl font-bold mb-3 text-white">Открытие нового казино</h3>
+                    <p className="text-white/80 leading-relaxed mb-4">
+                      SIZE расширяет своё влияние в развлекательной индустрии. Открыто новое элитное 
+                      казино в центре Лос-Сантоса с эксклюзивным доступом только для VIP-клиентов.
+                    </p>
                     <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300">
                       Читать далее
                     </Button>
@@ -74,19 +45,11 @@ const News = () => {
                     <span className="text-sm uppercase">Ноя</span>
                   </div>
                   <div className="flex-1">
-                    <EditableText
-                      text={news2Title}
-                      onSave={setNews2Title}
-                      tag="h3"
-                      className="text-2xl font-bold mb-3 text-white"
-                    />
-                    <EditableText
-                      text={news2Text}
-                      onSave={setNews2Text}
-                      tag="p"
-                      className="text-white/80 leading-relaxed mb-4"
-                      multiline
-                    />
+                    <h3 className="text-2xl font-bold mb-3 text-white">Новые партнёрские соглашения</h3>
+                    <p className="text-white/80 leading-relaxed mb-4">
+                      Заключены стратегические альянсы с ведущими деловыми структурами города. 
+                      Это укрепит позиции SIZE и откроет новые возможности для развития бизнеса.
+                    </p>
                     <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300">
                       Читать далее
                     </Button>
@@ -101,19 +64,11 @@ const News = () => {
                     <span className="text-sm uppercase">Ноя</span>
                   </div>
                   <div className="flex-1">
-                    <EditableText
-                      text={news3Title}
-                      onSave={setNews3Title}
-                      tag="h3"
-                      className="text-2xl font-bold mb-3 text-white"
-                    />
-                    <EditableText
-                      text={news3Text}
-                      onSave={setNews3Text}
-                      tag="p"
-                      className="text-white/80 leading-relaxed mb-4"
-                      multiline
-                    />
+                    <h3 className="text-2xl font-bold mb-3 text-white">Расширение территории влияния</h3>
+                    <p className="text-white/80 leading-relaxed mb-4">
+                      SIZE успешно установила контроль над новыми районами на западном побережье. 
+                      Операция прошла без эксцессов, все бизнес-процессы работают в штатном режиме.
+                    </p>
                     <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300">
                       Читать далее
                     </Button>
